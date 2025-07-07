@@ -1,9 +1,8 @@
 import React from "react";
 
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"; // Import Lucide icons
-import { Link } from "react-router-dom";
+
 import { Container } from "@/components/container";
-import { MainRoutes } from "@/lib/helpers";
 
 interface SocialLinkProps {
   href: string;
@@ -24,23 +23,23 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, icon, hoverColor }) => {
   );
 };
 
-interface FooterLinkProps {
-  to: string;
-  children: React.ReactNode;
-}
+// interface FooterLinkProps {
+//   to: string;
+//   children: React.ReactNode;
+// }
 
-const FooterLink: React.FC<FooterLinkProps> = ({ to, children }) => {
-  return (
-    <li>
-      <Link
-        to={to}
-        className="hover:underline text-gray-300 hover:text-gray-100"
-      >
-        {children}
-      </Link>
-    </li>
-  );
-};
+// const FooterLink: React.FC<FooterLinkProps> = ({ to, children }) => {
+//   return (
+//     <li>
+//       <Link
+//         to={to}
+//         className="hover:underline text-gray-300 hover:text-gray-100"
+//       >
+//         {children}
+//       </Link>
+//     </li>
+//   );
+// };
 
 export const Footer = () => {
   return (
